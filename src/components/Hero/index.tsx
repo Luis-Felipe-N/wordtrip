@@ -8,7 +8,8 @@ export function Hero() {
             backgroundSize="cover"
         >
             <Box
-                maxW={1240}
+                maxW={1300}
+                paddingX="15px"
                 margin="auto"
                 display="flex"
                 alignItems="center"

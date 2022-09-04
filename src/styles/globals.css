@@ -24,3 +24,17 @@ a {
     background: black;
   }
 }
+
+.swiper-button-prev, .swiper-button-next {
+  color: #FFBA08 !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #999999 !important;
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #FFBA08 !important;
+}
