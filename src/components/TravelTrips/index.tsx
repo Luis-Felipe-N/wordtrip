@@ -13,27 +13,18 @@ export function TravelTrips() {
                 alignItems="center"
                 justifyContent="space-between"
             > 
-                <Grid
-                    templateColumns="repeat(auto-fit, minmax(160px, 1fr))"
+                <Flex
+                    justifyContent="space-between"
                     flexWrap="wrap"
                     w="100%"
+                    gap={1}
                 >
-                    <GridItem>
                         <ItemTravelTrips text="vida noturna" image="/cocktail.png" />
-                    </GridItem>
-                    <GridItem>
                         <ItemTravelTrips text="praia" image="/surf.png" />
-                    </GridItem>
-                    <GridItem>
                         <ItemTravelTrips text="moderno" image="/building.png" />
-                    </GridItem>
-                    <GridItem>
                         <ItemTravelTrips text="clássica" image="/museum.png" />
-                    </GridItem>
-                    <GridItem>
                         <ItemTravelTrips text="e mais..." image="/earth.png" />
-                    </GridItem>
-                </Grid>
+                </Flex>
             </Box>
 
             <Divider colorScheme="gray.900" w="90px" marginX="auto" />

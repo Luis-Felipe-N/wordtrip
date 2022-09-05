@@ -1,6 +1,11 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Image, Text, useBreakpointValue } from "@chakra-ui/react";
 
 export function Hero() {
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        lg: true
+    })
+
     return (
         <Box
             backgroundImage="/Background.png"
@@ -22,6 +27,7 @@ export function Hero() {
                     <Text
                         as="h1"
                         fontSize={36}
+                        lineHeight="1.2"
                     >5 Continentes, <br /> infinitas possibilidades.</Text>
                     <Text
                         fontSize={20}
@@ -29,15 +35,17 @@ export function Hero() {
                     >Chegou a hora de tirar do papel a viagem que você sempre sonhou. </Text>
                 </Box>
 
-                <Image
-                    src="/Airplane.png" 
-                    alt="Imagem de um avião amarelo e nuvens"
-                    maxW={417.15}
-                    w="100%"
-                    h="270.74"
-                    marginTop={10}
-                    rotate="20deg"
-                />
+                {isWideVersion && (
+                    <Image
+                        src="/Airplane.png" 
+                        alt="Imagem de um avião amarelo e nuvens"
+                        maxW={417.15}
+                        w="100%"
+                        h="270.74"
+                        marginTop={10}
+                        rotate="20deg"
+                    />
+                )}
             </Box>
         </Box>
     )

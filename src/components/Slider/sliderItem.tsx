@@ -1,4 +1,5 @@
 import { Box, Text } from "@chakra-ui/react";
+import Link from "next/link";
 
 interface ISliderItemProps {
     image: string;
@@ -19,7 +20,13 @@ export function SliderItem({image, continent, text}: ISliderItemProps) {
                 <Box
                     color="gray.100"
                 >
-                    <Text fontWeight="bold" fontSize="48px" align="center" verticalAlign="middle">{continent}</Text>
+                    <Text fontWeight="bold" fontSize="48px" align="center" verticalAlign="middle">
+                        <Link href={`/continent/${continent}`}>
+                            <a>
+                            {continent}
+                            </a>
+                        </Link>
+                    </Text>
                     <Text fontWeight="bold" fontSize="24px" >{text}</Text>
                 </Box>
             </Box>
